@@ -32,6 +32,12 @@ def get_news_categories():
 @app.route('/')
 def index():
     return 'Welcome Manar from Flask!'
+@app.route('/api/hello')
+def hello():
+    return jsonify({
+        'message': 'Hello, World!'
+    })
+
 
 if __name__ == "__main__":
     app.run(port=8080)
